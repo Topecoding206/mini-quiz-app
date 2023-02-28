@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  flex-direction: column;
+  background-color: maroon;
+  color: aliceblue;
+}
+button {
+  color: maroon;
+  display: block;
+  margin-top: 0.4em;
+  margin-bottom: 0.6em;
+  border: 1px solid aliceblue;
+  outline: none;
+  background-color: aliceblue;
+  font-size: 1.2rem;
+  width: 100%;
+
+  cursor: pointer;
+}
+button:hover {
+  background-color: burlywood;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+.container p {
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 1.4rem;
+}
