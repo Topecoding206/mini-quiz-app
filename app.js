@@ -33,7 +33,8 @@ function display() {
             }, 1500);
             button.style.backgroundColor = "green";
             button.style.color = "white";
-          } else {
+          }
+          if (data[count].correctAnswer !== e.target.textContent) {
             setTimeout(() => {
               for (let button of buttons) {
                 if (button.innerText === data[count].correctAnswer) {
@@ -54,7 +55,6 @@ function display() {
           count = 0;
         }
       });
-      console.log(count);
     });
 }
 
