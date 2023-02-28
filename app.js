@@ -11,8 +11,6 @@ function display() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.dir(data);
-
       questions.textContent = data[count].question;
       const options = [
         data[count].correctAnswer,
@@ -25,10 +23,10 @@ function display() {
         button.addEventListener("click", (e) => {
           e.target.style.backgroundColor = "red";
           button.style.color = "white";
-          if (data[count].correctAnswer === e.target.textContent) {
+          if (data[count].correctAnswer === e.target.textContent && e.target) {
             correctAnswer++;
+            count++;
             setTimeout(() => {
-              count++;
               display();
             }, 1500);
             button.style.backgroundColor = "green";
